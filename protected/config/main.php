@@ -24,7 +24,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123123',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array('127.0.0.1', '::1', '192.168.88.88'),
 		),
 	),
 
@@ -52,11 +52,12 @@ return array(
 		*/
 		// uncomment the following to use a MySQL database
 		'db'=>array(
-			'connectionString' => 'mysql:host=dev4.oxagile.com;dbname=yii-grouk',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'rootpass',
-			'charset' => 'utf8',
+			'connectionString'  => 'mysql:host=dev4.oxagile.com;dbname=yii-grouk',
+			'emulatePrepare'    => true,
+			'username'          => 'root',
+			'password'          => 'rootpass',
+			'charset'           => 'utf8',
+            'tablePrefix'       => 'tbl_',
 		),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
